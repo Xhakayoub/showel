@@ -1,6 +1,4 @@
-# Showell Omeka-s Plugin
-
-[![Join the chat at https://gitter.im/poetapp/Lobby](https://badges.gitter.im/poetapp/Lobby.svg)](https://gitter.im/poetapp/Lobby)
+# Showell Omeka-s Module 
 
 It is a module that allows you to take an image or image collection, analyze it and just render the images that contains only one person (profile picture), by making the facial recognition of each image
 
