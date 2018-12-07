@@ -4,9 +4,12 @@ namespace showel;
 
  use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
  use Zend\ModuleManager\Feature\ConfigProviderInterface;
+ use Omeka\Module\AbstractModule;
 
- class Module implements AutoloaderProviderInterface, ConfigProviderInterface
- {
+ class Module extends AbstractModule
+{
+   
+
      public function getAutoloaderConfig()
      {
          return array(
@@ -20,6 +23,15 @@ namespace showel;
              ),
          );
      }
+
+     public function uninstall(ServiceLocatorInterface $serviceLocator)
+    {
+        $settings = $serviceLocator->get('Omeka\Settings');
+        $settings->delete('showel_directory');
+        $settings->delete('showel_delete_file');
+    }
+
+ 
 
      public function getConfig()
      {
