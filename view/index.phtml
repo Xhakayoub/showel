@@ -2,7 +2,7 @@
 
 include "FaceDetector.php";
 
-$detector = new showel\FaceDetector('detection.dat');
+$detector = new FaceDetector('detection.dat');
 $detector->faceDetect('lena512color.jpg');
 $detector->toJpeg();
 ?>

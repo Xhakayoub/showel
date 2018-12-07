@@ -5,24 +5,14 @@ namespace showel;
  use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
  use Zend\ModuleManager\Feature\ConfigProviderInterface;
  use Omeka\Module\AbstractModule;
+ use Zend\Mvc\Controller\AbstractController;
+ use Zend\ServiceManager\ServiceLocatorInterface;
+ use Zend\View\Renderer\PhpRenderer;
 
  class Module extends AbstractModule
 {
    
 
-     public function getAutoloaderConfig()
-     {
-         return array(
-             'Zend\Loader\ClassMapAutoloader' => array(
-                 __DIR__ . '/autoload_classmap.php',
-             ),
-             'Zend\Loader\StandardAutoloader' => array(
-                 'namespaces' => array(
-                     __NAMESPACE__ => __DIR__ . '/src/' . __NAMESPACE__,
-                 ),
-             ),
-         );
-     }
 
      public function uninstall(ServiceLocatorInterface $serviceLocator)
     {
@@ -37,4 +27,32 @@ namespace showel;
      {
          return include __DIR__ . '/config/module.config.php';
      }
+
+     public function getConfigForm(PhpRenderer $renderer)
+    {
+        $settings = $this->getServiceLocator()->get('Omeka\Settings');
+        $form = new ConfigForm;
+        $form->init();
+        $form->setData([
+            'directory' => $settings->get('showel_directory'),
+            'delete_file' => $settings->get('showel_delete_file', 'no'),
+        ]);
+        return $renderer->formCollection($form, false);
+    }
+
+    public function handleConfigForm(AbstractController $controller)
+    {
+        $settings = $this->getServiceLocator()->get('Omeka\Settings');
+        $form = new ConfigForm;
+        $form->init();
+        $form->setData($controller->params()->fromPost());
+        if (!$form->isValid()) {
+            $controller->messenger()->addErrors($form->getMessages());
+            return false;
+        }
+        $formData = $form->getData();
+        $settings->set('showel_directory', $formData['directory']);
+        $settings->set('showel_delete_file', $formData['delete_file']);
+        return true;
+    }
  }
