@@ -9,7 +9,7 @@ It is a module that allows you to take an image or image collection, analyze it 
 
 ### From the Omeka-s Plugin Directory
 
-The Official Showell Module can be found here: https://github.com/Xhakayoub/showel
+The Official TrueProfil Module can be found here: https://github.com/Xhakayoub/showel
 
 ### From this repository
 
