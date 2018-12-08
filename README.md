@@ -5,6 +5,10 @@ It is a module that allows you to take an image or image collection, analyze it 
 -If the module does not detect a face in an image, it will consider it empty and it will delete it
 -If the module detects several faces in an image, it will consider it too busy and useless.
 
+## Why
+-When LinkedIn tries to fix this problem like that, so we need to have a module like Realprofil
+
+
 ## How to Install
 
 ### From the Omeka-s Module Directory
