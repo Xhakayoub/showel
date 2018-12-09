@@ -1,4 +1,4 @@
-# RealProfil Omeka-s Module 
+# RealProfil (Omeka-s Module) 
 
 ## What ?
 It is a module that allows you to take an image, analyze it and just render the images that contains only one person (profile picture), by making the facial recognition of each image
