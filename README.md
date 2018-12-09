@@ -1,16 +1,17 @@
 # RealProfil Omeka-s Module 
 
+## What ?
 It is a module that allows you to take an image, analyze it and just render the images that contains only one person (profile picture), by making the facial recognition of each image
 
--If the module does not detect a face in an image, it will consider it empty and it will delete it
--If the module detects several faces in an image, it will consider it too busy and useless.
+   -If the module does not detect a face in an image, it will consider it empty and it will delete it
+   -If the module detects several faces in an image, it will consider it too busy and useless.
 
-## Why
+## Why ?
 -When LinkedIn tries to fix this problem like that, so we need to have a module like Realprofil
 ![linkedin](https://user-images.githubusercontent.com/43969272/49691152-a46cbf80-fb3c-11e8-8639-78380f4c6406.PNG)
 
 
-## How to Install
+## How to Install ?
 
 ### From the Omeka-s Module Directory
 
