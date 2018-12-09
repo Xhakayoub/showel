@@ -38,4 +38,4 @@ The packaged zip file will be available under the build directory which is creat
 
 ## How to Use
 
-From your Omeka-s administration panel go to `Modules ` and scroll down until you find `Showell`. then click on `Settings`, You will need to activate it.
+From your Omeka-s administration panel go to `Modules ` and scroll down until you find `RealProfil`. then click on `install`, You will need to activate it.
