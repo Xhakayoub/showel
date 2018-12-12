@@ -40,6 +40,11 @@ The packaged zip file will be available under the build directory which is creat
 
 From your Omeka-s administration panel go to `Modules ` and scroll down until you find `RealProfil`. then click on `install`, You will need to activate it.
 
+## Contact
+
+Mouissi Ayoub
+mouissi.ayoub@gmail.com
++336 38 03 86 42
 
 ## Copyright
 
