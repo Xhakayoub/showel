@@ -42,9 +42,9 @@ From your Omeka-s administration panel go to `Modules ` and scroll down until yo
 
 ## Contact
 
-Mouissi Ayoub
-mouissi.ayoub@gmail.com
-+336 38 03 86 42
+Mouissi Ayoub.
+mouissi.ayoub@gmail.com.
++336 38 03 86 42.
 
 ## Copyright
 
